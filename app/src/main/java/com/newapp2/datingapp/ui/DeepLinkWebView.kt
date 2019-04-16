@@ -68,6 +68,8 @@ class DeepLinkWebView : BaseActivity(), AdvancedWebView.Listener {
             if (gclid!!.contains("gclid")) {
                 gclid = gclid?.substringAfter("gclid=")
                 gclid = gclid?.substringBefore("&conv")
+            } else {
+                gclid = null
             }
         }
     }

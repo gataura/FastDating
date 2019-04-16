@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "256588457720",
+    "firebase_url": "https://datingallfixes2.firebaseio.com",
+    "project_id": "datingallfixes2",
+    "storage_bucket": "datingallfixes2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:256588457720:android:41b4aab3767e78a1",
+        "android_client_info": {
+          "package_name": "com.newapp2.datingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "256588457720-1ujj9c2cdh2h5k5ksbhrp9uh1srqu60b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7alnXLKe_gp4BMrnYsbV0wTrIa2Cu37I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "256588457720-1ujj9c2cdh2h5k5ksbhrp9uh1srqu60b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

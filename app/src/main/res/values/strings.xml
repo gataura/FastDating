@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Знакомства и общение для отношений</string>
+    <string name="title_activity_main">Dating App</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_terms">Terms and Conditions</string>
+    <string name="about_you">About you</string>
+    <string name="i_want_to_make_it_clear_that">I want to make it clear that *</string>
+    <string name="i_agree_to_the">I agree to the</string>
+    <string name="terms_and_conditions_of_use">Terms and Conditions of use</string>
+    <string name="add_image">Add Image</string>
+    <string name="create_account">Create Account</string>
+    <string name="log_in_with_facebook">Log in with Facebook</string>
+
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="sign_in">Sign in</string>
+    <string name="feedback_text">You can write to us on daitingfeedback@appdaiting.com</string>
+    <string name="your_age">Ваш возраст</string>
+    <string name="less_twenty_five">Меньше 25</string>
+    <string name="twenty_five_nine">25-29</string>
+    <string name="more_thirty">Больше 30</string>
+
+    <string-array name="races">
+        <item>White</item>
+        <item>Asian</item>
+        <item>Black</item>
+        <item>Other</item>
+    </string-array>
+
+    <string name="facebook_app_id">259470224931113</string>
+    <string name="fb_login_protocol_scheme">fb259470224931113</string>
+
+</resources>

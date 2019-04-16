@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginRight="16dp"
+    card_view:cardCornerRadius="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+
+            android:text="Select your Weight"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/primary_dark" />
+
+        <TextView
+            android:id="@+id/tv_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+
+            android:layout_marginBottom="8dp"
+            android:layout_toLeftOf="@id/tv_prefix_kg"
+            android:text="50"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/primary_text" />
+
+        <TextView
+            android:id="@+id/tv_prefix_kg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:text=" kg"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/primary_text" />
+
+
+        <me.angrybyte.numberpicker.view.ActualNumberPicker
+            android:id="@+id/actual_picker_weight"
+            android:layout_width="258dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/tv_weight"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+
+            android:layout_marginBottom="8dp"
+            android:background="@color/primary"
+            app:bar_color="@android:color/white"
+            app:bar_width="1dp"
+            app:bars_count="30"
+            app:controls_color="@android:color/white"
+            app:draw_over_controls="true"
+            app:draw_over_text="false"
+            app:fast_controls_color="@color/primary_dark"
+            app:highlight_color="@color/primary"
+            app:max_value="300"
+            app:min_value="10"
+            app:selection_color="@color/primary_light"
+            app:show_bars="true"
+            app:show_controls="true"
+            app:show_fast_controls="true"
+            app:show_highlight="true"
+            app:show_text="false"
+            app:text_color="@android:color/white"
+            app:text_size="16sp"
+            app:value="50"
+             />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

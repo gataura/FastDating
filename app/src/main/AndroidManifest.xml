@@ -9,14 +9,25 @@
     <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE"/>
 
+    <!-- Samsung -->
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" />
+
+    <!-- Sony -->
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+
+    <!-- HTC -->
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" />
+
 
 
     <application
         android:name="com.newapp2.datingapp.Model.App"
         android:allowBackup="true"
-        android:icon="@drawable/ic_second_dating"
+        android:icon="@drawable/ico_sec"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/ic_second_dating"
+        android:roundIcon="@drawable/ico_sec"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
@@ -28,6 +39,9 @@
                 <action android:name="com.android.vending.INSTALL_REFERRER" />
             </intent-filter>
         </receiver>
+        <service
+            android:name="com.newapp2.datingapp.ui.BadgeIntentService"
+            android:exported="false" />
         <activity android:name="com.newapp2.datingapp.ProfileActivity"></activity>
         <activity
             android:name="com.newapp2.datingapp.MainActivity"

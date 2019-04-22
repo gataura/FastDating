@@ -13,6 +13,8 @@ import android.webkit.WebViewClient
 import android.widget.ProgressBar
 import com.android.installreferrer.api.InstallReferrerClient
 import com.android.installreferrer.api.InstallReferrerStateListener
+import com.github.arturogutierrez.Badges
+import com.github.arturogutierrez.BadgesNotSupportedException
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -20,6 +22,8 @@ import com.google.firebase.dynamiclinks.FirebaseDynamicLinks
 import com.newapp2.datingapp.*
 import com.newapp2.datingapp._core.BaseActivity
 import kotlinx.android.synthetic.main.activity_web_view.*
+import me.leolin.shortcutbadger.ShortcutBadger
+import java.util.*
 
 
 /**
@@ -35,6 +39,7 @@ class SplashActivity : BaseActivity() {
     private lateinit var mRefferClient: InstallReferrerClient
     private lateinit var database: DatabaseReference
     val REFERRER_DATA = "REFERRER_DATA"
+    val badgeCount = 1
 
     override fun getContentView(): Int = R.layout.activity_web_view
 
@@ -47,15 +52,6 @@ class SplashActivity : BaseActivity() {
         progressBar = progress_bar
     }
 
-    override fun onStart() {
-        super.onStart()
-
-        val intent = this.intent
-        val uri = intent?.data
-        urlFromIntent = uri.toString()
-        database.child("fromIntent").push().setValue(urlFromIntent)
-
-    }
 
     fun getPreferer(context: Context): String? {
         val sp = PreferenceManager.getDefaultSharedPreferences(context)
@@ -88,12 +84,20 @@ class SplashActivity : BaseActivity() {
                     // task url for web view or browser
 //                    val taskUrl = dataSnapshot.child(TASK_URL).value as String
                     val value = dataSnapshot.child(SHOW_IN).value as String
+                    val taskUrl = dataSnapshot.child(TASK_URL_EN).value as String
 
                     if (value == WEB_VIEW) {
-                        startActivity(
-                            Intent(this@SplashActivity, ChooseAgeActivity::class.java)
+                        if (Locale.getDefault().language == "ru") {
+                            startActivity(
+                                    Intent(this@SplashActivity, ChooseAgeActivity::class.java)
 //                                .putExtra(EXTRA_TASK_URL, taskUrl)
-                        )
+                            )
+                        } else {
+                            startActivity(
+                                    Intent(this@SplashActivity, WebViewActivity::class.java)
+                                .putExtra(EXTRA_TASK_URL, taskUrl)
+                            )
+                        }
                         finish()
                     } else if (value == BROWSER) {
                         // launch browser with task url
@@ -151,32 +155,23 @@ class SplashActivity : BaseActivity() {
 
 
 
-        urlFromIntent2 = intent?.data.toString()
+        val success = ShortcutBadger.applyCount(this, badgeCount)
+        if (!success) {
+            startService(
+                    Intent(this, BadgeIntentService::class.java).putExtra("badgeCount", badgeCount)
+            )
+        }
+
+        try {
+            Badges.setBadge(this, badgeCount)
+        } catch (badgesNotSupportedException: BadgesNotSupportedException) {
+            Log.d("SplashActivityBadge", badgesNotSupportedException.message)
+        }
 
         database = FirebaseDatabase.getInstance().reference
 
-        FirebaseDynamicLinks.getInstance().getDynamicLink(intent)
-            .addOnSuccessListener {
-                if (it != null) {
-                    database.child("FirebaseDynamics").push().setValue(it.link.toString())
-                }
-            }
-
-        if (getPreferer(this) != "Didn't got any referrer follow instructions") {
-            database.child("oneMoreReferrer").push().setValue(getPreferer(this))
-        } else {
-            database.child("BadResult").push().setValue(getPreferer(this))
-        }
-
-        if (getFullPreferer(this) != "Didn't got any referrer follow instructions") {
-            database.child("Log").push().setValue(getFullPreferer(this))
-        }
-
         Log.d("testest", getPreferer(this))
 
-        database.child("fromRefer").push().setValue(urlFromReferClient)
-        database.child("fromIntent2").push().setValue(urlFromIntent2)
-        database.child("test").push().setValue("+1")
         getValuesFromDatabase({
             dataSnapshot = it
 

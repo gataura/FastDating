@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:text="Terms and Conditions of Use of any Rubisoft App"
+            android:text="@string/terms_and_conditions_of_use_of_any_rubisoft_app"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1" />
 
         <TextView
@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:text="The Terms and any dispute or Claim arising out of or in connection with it or its subject matter (including non-contractual disputes or Claims) shall be governed by and construed in accordance with Spanish law. In the event there is a discrepancy between this Spanish language version and any translated copies of the app Terms and Conditions, the Spanish version shall prevail." />
+            android:text="@string/terms_text" />
 
         <TextView
             android:layout_width="match_parent"
@@ -32,7 +32,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginRight="16dp"
-            android:text="Summary"
+            android:text="@string/terms_summary"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textStyle="bold" />
 
@@ -41,19 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:text="You should read these terms and conditions in full because they apply every time you visit any Rubisoft App. However, just in čase you ever need a reminder of the main points, here's a quick summary:
-
-1)	If you are underthe age of 18 then unfortunately you can't use any Rubisoft App yet because iťs a meeting place for adults only.
-
-2)	We're not responsible for anything that you post or say while you are on any Rubisoft App and we don't monitor the content posted by users, but if we do see or someone alerts us that you háve posted something that we think is inappropriate then we are allowed at our discretion to remove it.
-
-3)	If you post any content that actually belongs to someone eise and they get annoyed (or even call in their lawyers), we are not in the firing line. You háve to také responsibility for what you post.
-
-4)	If you are concerned about how your data is being ušed by any Rubisoft App then please refer to our Privacy Policy. It will teil you all you need to know.
-The full legal bit
-
-Rubisoft Apps are designed as a fórum for meeting new people, a place to háve share photos and informatinn It is intenrierl to ha a fnn nlare to and
-" />
+            android:text="@string/terms_main_text" />
 
         <TextView
             android:layout_width="match_parent"
@@ -61,7 +49,7 @@ Rubisoft Apps are designed as a fórum for meeting new people, a place to háve 
             android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginRight="16dp"
-            android:text="The full legal bit"
+            android:text="@string/the_full_legal_bit"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textStyle="bold" />
 
@@ -70,7 +58,6 @@ Rubisoft Apps are designed as a fórum for meeting new people, a place to háve 
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:text="Rubisoft Apps are designed as a fórum for meeting new people, a place to háve share photos and informatinn It is intenrierl to ha a fnn nlare to and
-" />
+            android:text="@string/terms_last_text" />
     </LinearLayout>
 </ScrollView>

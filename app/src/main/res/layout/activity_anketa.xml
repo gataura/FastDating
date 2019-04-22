@@ -21,7 +21,7 @@
             android:layout_marginRight="16dp"
             android:fontFamily="sans-serif-light"
             android:gravity="center_horizontal"
-            android:text="Fill an account"
+            android:text="@string/fill_an_account"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1"
             android:textColor="@color/primary_text" />
 
@@ -50,7 +50,7 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginRight="16dp"
 
-                    android:text="Pick your Birthday date"
+                    android:text="@string/pick_birthday_date"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/primary_dark" />
 
@@ -62,7 +62,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="16dp"
                     android:layout_marginBottom="16dp"
-                    android:hint="01.01.1980"
+                    android:hint="@string/birth_date_tint"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textColor="@color/primary_text" />
             </LinearLayout>
@@ -96,7 +96,7 @@
                     android:layout_marginRight="16dp"
                     android:layout_marginBottom="8dp"
 
-                    android:text="Select your Race"
+                    android:text="@string/select_your_race"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/primary_dark" />
 

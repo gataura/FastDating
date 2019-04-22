@@ -8,31 +8,31 @@
         <item
             android:id="@+id/nav_messages"
             android:icon="@drawable/ic_stat_messages"
-            android:title="Messages" />
+            android:title="@string/messages_menu" />
         <item
             android:id="@+id/nav_your_profile"
             android:icon="@drawable/ic_stat_your_profile"
-            android:title="Your profile" />
+            android:title="@string/your_profile_menu" />
         <item
             android:id="@+id/nav_free_stars"
             android:icon="@drawable/ic_stat_free_stars"
-            android:title="Free stars" />
+            android:title="@string/free_stars_menu" />
         <item
             android:id="@+id/nav_chat"
             android:icon="@drawable/ic_stat_chat"
-            android:title="Chat" />
+            android:title="@string/chat_menu" />
         <item
             android:id="@+id/nav_help"
             android:icon="@drawable/ic_stat_help"
-            android:title="Help" />
+            android:title="@string/help_menu" />
         <item
             android:id="@+id/nav_feedback"
             android:icon="@drawable/ic_stat_feedback"
-            android:title="Feedback" />
+            android:title="@string/feedback_menu" />
         <item
             android:id="@+id/nav_sign_out"
             android:icon="@drawable/ic_stat_sign_out"
-            android:title="Sign out" />
+            android:title="@string/sign_out_menu" />
     </group>
 
 

@@ -22,7 +22,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginRight="16dp"
 
-            android:text="Select your Weight"
+            android:text="@string/select_your_weight"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             android:textColor="@color/primary_dark" />
 
@@ -35,7 +35,7 @@
 
             android:layout_marginBottom="8dp"
             android:layout_toLeftOf="@id/tv_prefix_kg"
-            android:text="50"
+            android:text="@string/weight_default"
 
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/primary_text" />

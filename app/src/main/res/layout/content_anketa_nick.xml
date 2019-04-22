@@ -22,7 +22,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginRight="16dp"
 
-            android:text="Enter your nickname"
+            android:text="@string/enter_your_nickname"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             android:textColor="@color/primary_dark" />
 
@@ -33,7 +33,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
-            android:hint="Nick"
+            android:hint="@string/nick_hint"
             android:textColor="@color/primary_text" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

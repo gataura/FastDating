@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">Знакомства и общение для отношений</string>
+    <string name="title_activity_main">Знакомства и общение для отношений</string>
+    <string name="navigation_drawer_open">Открыть меню</string>
+    <string name="navigation_drawer_close">Закрыть меню</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Заголовок меню</string>
+    <string name="action_terms">Правила и условия пользования</string>
+    <string name="about_you">О вас</string>
+    <string name="i_want_to_make_it_clear_that">Мне бы хотелось уточнить что *</string>
+    <string name="i_agree_to_the">Я согласен с</string>
+    <string name="terms_and_conditions_of_use">Правилами и условиями пользования</string>
+    <string name="add_image">Добавить фото</string>
+    <string name="create_account">Создать аккаунт</string>
+    <string name="log_in_with_facebook">Войти через Facebook</string>
+
+    <string name="already_have_an_account">Уже зарегистрированы?</string>
+    <string name="feedback_text">Вы может написать нам по адресу daitingfeedback@appdaiting.com</string>
+    <string name="your_age">Ваш возраст</string>
+    <string name="less_twenty_five">меньше 25</string>
+    <string name="twenty_five_nine">25-29</string>
+    <string name="more_thirty">больше 30</string>
+
+    <string-array name="races">
+        <item>Белый</item>
+        <item>Азиат</item>
+        <item>Черный</item>
+        <item>Другое</item>
+    </string-array>
+
+    <string name="facebook_app_id">259470224931113</string>
+    <string name="fb_login_protocol_scheme">fb259470224931113</string>
+    <string name="fill_an_account">Заполните анкету</string>
+    <string name="pick_birthday_date">Выберите дату рождения</string>
+    <string name="birth_date_tint">01.01.1980</string>
+    <string name="select_your_race">Выберите расу</string>
+    <string name="terms_and_conditions">Правила и условия пользования</string>
+    <string name="ok_button">ОК</string>
+    <string name="select_marital_status">Ваш статус</string>
+    <string name="i_m_a_single_person">Я один</string>
+    <string name="we_are_a_couple">Мы пара</string>
+    <string name="optional_text">* Необязательно</string>
+    <string name="create_an_account">Создать акккаунт</string>
+    <string name="enter_your_email">Введите ваш email</string>
+    <string name="enter_email_hint">Введите email</string>
+    <string name="enter_your_password">Введите ваш пароль</string>
+    <string name="enter_password_hint">Введите пароль</string>
+    <string name="repeat_your_password">Подтвердите ваш пароль</string>
+    <string name="repeat_password_hint">Подтвердите пароль</string>
+    <string name="change_button">Сменить</string>
+    <string name="sign_in">Войти</string>
+    <string name="terms_and_conditions_of_use_of_any_rubisoft_app">Terms and Conditions of Use of any Rubisoft App</string>
+    <string name="terms_text">The Terms and any dispute or Claim arising out of or in connection with it or its subject matter (including non-contractual disputes or Claims) shall be governed by and construed in accordance with Spanish law. In the event there is a discrepancy between this Spanish language version and any translated copies of the app Terms and Conditions, the Spanish version shall prevail.</string>
+    <string name="terms_summary">Summary</string>
+    <string name="terms_main_text">You should read these terms and conditions in full because they apply every time you visit any Rubisoft App. However, just in čase you ever need a reminder of the main points, here\'s a quick summary: 1) If you are underthe age of 18 then unfortunately you can\'t use any Rubisoft App yet because iťs a meeting place for adults only. 2) We\'re not responsible for anything that you post or say while you are on any Rubisoft App and we don\'t monitor the content posted by users, but if we do see or someone alerts us that you háve posted something that we think is inappropriate then we are allowed at our discretion to remove it. 3) If you post any content that actually belongs to someone eise and they get annoyed (or even call in their lawyers), we are not in the firing line. You háve to také responsibility for what you post. 4) If you are concerned about how your data is being ušed by any Rubisoft App then please refer to our Privacy Policy. It will teil you all you need to know. The full legal bit Rubisoft Apps are designed as a fórum for meeting new people, a place to háve share photos and informatinn It is intenrierl to ha a fnn nlare to and</string>
+    <string name="the_full_legal_bit">The full legal bit</string>
+    <string name="terms_last_text">Rubisoft Apps are designed as a fórum for meeting new people, a place to háve share photos and informatinn It is intenrierl to ha a fnn nlare to and</string>
+    <string name="select_your_height">Ваш рост</string>
+    <string name="enter_your_nickname">Введите ваш ник</string>
+    <string name="nick_hint">Ник</string>
+    <string name="select_your_profile_photo">Выберите фото для профиля</string>
+    <string name="select_your_weight">Ваш вес</string>
+    <string name="weight_default">50</string>
+    <string name="height_default">150</string>
+    <string name="default_name">Алекса</string>
+    <string name="default_stars">0</string>
+    <string name="messages_menu">Сообщения</string>
+    <string name="your_profile_menu">Ваш профиль</string>
+    <string name="free_stars_menu">Бесплатные звезды</string>
+    <string name="chat_menu">Чат</string>
+    <string name="help_menu">Помощь</string>
+    <string name="feedback_menu">Отзыв</string>
+    <string name="sign_out_menu">Выйти</string>
+
+</resources>

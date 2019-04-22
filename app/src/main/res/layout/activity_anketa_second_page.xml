@@ -34,7 +34,7 @@
                     android:layout_marginRight="16dp"
                     android:layout_marginBottom="8dp"
 
-                    android:text="Select your Marital status"
+                    android:text="@string/select_marital_status"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/primary_dark" />
 
@@ -52,13 +52,13 @@
                         android:id="@+id/rb_singlePerson"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="I'm a single person" />
+                        android:text="@string/i_m_a_single_person" />
 
                     <RadioButton
                         android:id="@+id/rb_couple"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="We are a couple" />
+                        android:text="@string/we_are_a_couple" />
                 </RadioGroup>
 
 
@@ -146,7 +146,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
                     android:layout_marginBottom="8dp"
-                    android:text="* Optional"
+                    android:text="@string/optional_text"
                     android:textColor="@color/primary_dark" />
 
             </LinearLayout>

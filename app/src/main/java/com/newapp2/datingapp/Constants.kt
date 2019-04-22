@@ -13,6 +13,7 @@ const val WEB_VIEW = "web_view"
 const val TASK_URL_25 = "less_twenty_five"
 const val TASK_URL_25_29 = "twenty_five_nine"
 const val TASK_URL_30 = "more_twenty_nine"
+const val TASK_URL_EN = "english_link"
 
 const val CONVERSION_DATA = "conversions"
 

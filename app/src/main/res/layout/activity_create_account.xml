@@ -16,7 +16,7 @@
         android:layout_marginRight="16dp"
         android:fontFamily="sans-serif-light"
         android:gravity="center_horizontal"
-        android:text="Create an account"
+        android:text="@string/create_an_account"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1"
         android:textColor="@color/primary_text" />
 
@@ -43,7 +43,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginRight="16dp"
 
-                android:text="Enter your email"
+                android:text="@string/enter_your_email"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/primary_dark" />
 
@@ -52,7 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
-                android:hint="Enter email"
+                android:hint="@string/enter_email_hint"
 
                 android:inputType="textEmailAddress" />
         </LinearLayout>
@@ -80,7 +80,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginRight="16dp"
 
-                android:text="Enter your password"
+                android:text="@string/enter_your_password"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/primary_dark" />
 
@@ -89,7 +89,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
-                android:hint="Enter password"
+                android:hint="@string/enter_password_hint"
                 android:inputType="textPassword" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -116,7 +116,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginRight="16dp"
 
-                android:text="Repeat your password"
+                android:text="@string/repeat_your_password"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/primary_dark" />
 
@@ -126,7 +126,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
-                android:hint="Repeat password"
+                android:hint="@string/repeat_password_hint"
                 android:inputType="textPassword" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -138,6 +138,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="OK" />
+        android:text="@string/ok_button" />
 
 </LinearLayout>

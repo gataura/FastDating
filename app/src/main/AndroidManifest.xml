@@ -21,7 +21,6 @@
     <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" />
 
 
-
     <application
         android:name="com.newapp2.datingapp.Model.App"
         android:allowBackup="true"
@@ -162,6 +161,16 @@
 
                 <data
                     android:host="n.jolly.me"
+                    android:scheme="http"/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                    android:host="4clubmail.com"
                     android:scheme="http"/>
             </intent-filter>
             <intent-filter>

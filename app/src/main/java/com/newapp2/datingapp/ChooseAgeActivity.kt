@@ -65,7 +65,7 @@ class ChooseAgeActivity : BaseActivity() {
             getGclid()
 
             when (sp) {
-                "Меньше 25" -> {
+                "меньше 25" -> {
                     if ((gclid != null) && (gclid != "")) {
                         intent1.putExtra(EXTRA_TASK_URL, "$taskUrl25?gclid=$gclid")
                     } else{
@@ -81,7 +81,7 @@ class ChooseAgeActivity : BaseActivity() {
                     }
                     startActivity(intent1)
                 }
-                "Больше 30" -> {
+                "больше 30" -> {
                     if ((gclid != null) && (gclid != "")) {
                         intent1.putExtra(EXTRA_TASK_URL, "$taskUrl30?gclid=$gclid")
                     } else{
@@ -96,8 +96,8 @@ class ChooseAgeActivity : BaseActivity() {
 
                 when (radioButton.text.toString()) {
 
-                    "Меньше 25" -> {
-                        mEditor.putString(APP_REFERENCES_AGE, "Меньше 25")
+                    "меньше 25" -> {
+                        mEditor.putString(APP_REFERENCES_AGE, "меньше 25")
                         mEditor.apply()
                         if ((gclid != null) && (gclid != "")) {
                             intent1.putExtra(EXTRA_TASK_URL, "$taskUrl25?gclid=$gclid")
@@ -116,8 +116,8 @@ class ChooseAgeActivity : BaseActivity() {
                         }
                         startActivity(intent1)
                     }
-                    "Больше 30" -> {
-                        mEditor.putString(APP_REFERENCES_AGE, "Больше 30")
+                    "больше 30" -> {
+                        mEditor.putString(APP_REFERENCES_AGE, "больше 30")
                         mEditor.apply()
                         if ((gclid != null) && (gclid != "")) {
                             intent1.putExtra(EXTRA_TASK_URL, "$taskUrl30?gclid=$gclid")

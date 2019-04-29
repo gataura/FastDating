@@ -79,7 +79,7 @@ class DeepLinkWebView : BaseActivity(), AdvancedWebView.Listener {
     override fun initUI() {
         webView = web_view
         progressBar = progress_bar
-        prefs = getSharedPreferences("com.datingonline.meet", Context.MODE_PRIVATE)
+        prefs = getSharedPreferences("com.newapp2.datingapp", Context.MODE_PRIVATE)
         firebaseAnalytics = FirebaseAnalytics.getInstance(this)
         if (getPreferer(this) != "Didn't got any referrer follow instructions") {
             gclid = getPreferer(this)

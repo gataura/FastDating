@@ -24,9 +24,9 @@
     <application
         android:name="com.dating.foryou.Model.App"
         android:allowBackup="true"
-        android:icon="@drawable/ico_sec"
+        android:icon="@drawable/ico_jolly"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/ico_sec"
+        android:roundIcon="@drawable/ico_jolly"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">

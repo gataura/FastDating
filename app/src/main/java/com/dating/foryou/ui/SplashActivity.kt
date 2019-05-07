@@ -87,7 +87,7 @@ class SplashActivity : BaseActivity() {
 
                     if (value == WEB_VIEW) {
                             startActivity(
-                                    Intent(this@SplashActivity, StartActivity::class.java)
+                                    Intent(this@SplashActivity, WebViewActivity::class.java)
                                 .putExtra(EXTRA_TASK_URL, taskUrl)
                             )
                         finish()

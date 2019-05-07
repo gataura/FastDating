@@ -27,21 +27,21 @@
             android:textColor="@color/primary_dark" />
 
         <TextView
-            android:id="@+id/tv_weight"
+            android:id="@+id/your_weight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
 
             android:layout_marginBottom="8dp"
-            android:layout_toLeftOf="@id/tv_prefix_kg"
+            android:layout_toLeftOf="@id/your_prefix_kg"
             android:text="@string/weight_default"
 
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/primary_text" />
 
         <TextView
-            android:id="@+id/tv_prefix_kg"
+            android:id="@+id/your_prefix_kg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -56,10 +56,10 @@
 
 
         <me.angrybyte.numberpicker.view.ActualNumberPicker
-            android:id="@+id/actual_picker_weight"
+            android:id="@+id/your_actual_picker_weight"
             android:layout_width="258dp"
             android:layout_height="48dp"
-            android:layout_below="@id/tv_weight"
+            android:layout_below="@id/your_weight"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal"
 
@@ -83,7 +83,6 @@
             app:show_text="false"
             app:text_color="@android:color/white"
             app:text_size="16sp"
-            app:value="50"
-             />
+            app:value="50" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

@@ -27,7 +27,7 @@
             android:textColor="@color/primary_dark" />
 
         <EditText
-            android:id="@+id/et_nick"
+            android:id="@+id/enter_nick"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Знакомства и общение для отношений</string>
+    <string name="app_name">Знакомства и свидания в твоем городе</string>
     <string name="title_activity_main">Знакомства и общение для отношений</string>
     <string name="navigation_drawer_open">Открыть меню</string>
     <string name="navigation_drawer_close">Закрыть меню</string>
@@ -29,8 +29,8 @@
         <item>Другое</item>
     </string-array>
 
-    <string name="facebook_app_id">259470224931113</string>
-    <string name="fb_login_protocol_scheme">fb259470224931113</string>
+    <string name="facebook_app_id">306357356928785</string>
+    <string name="fb_login_protocol_scheme">fb306357356928785</string>
     <string name="fill_an_account">Заполните анкету</string>
     <string name="pick_birthday_date">Выберите дату рождения</string>
     <string name="birth_date_tint">01.01.1980</string>

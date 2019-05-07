@@ -47,7 +47,7 @@
                 android:textColor="@color/primary_dark" />
 
             <EditText
-                android:id="@+id/et_email"
+                android:id="@+id/enter_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
@@ -83,7 +83,7 @@
                 android:textColor="@color/primary_dark" />
 
             <EditText
-                android:id="@+id/et_password"
+                android:id="@+id/enter_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
@@ -96,7 +96,7 @@
 
 
     <Button
-        android:id="@+id/btn_sign_in"
+        android:id="@+id/button_sign_in"
         style="@style/button_style"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

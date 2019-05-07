@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.newapp2.datingapp">
+    package="com.dating.foryou">
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.CAMERA"/>
@@ -22,7 +22,7 @@
 
 
     <application
-        android:name="com.newapp2.datingapp.Model.App"
+        android:name="com.dating.foryou.Model.App"
         android:allowBackup="true"
         android:icon="@drawable/ico_sec"
         android:label="@string/app_name"
@@ -31,7 +31,7 @@
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
         <receiver
-            android:name="com.newapp2.datingapp.ReferrerDataReceiver"
+            android:name="com.dating.foryou.ReferrerDataReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -39,11 +39,12 @@
             </intent-filter>
         </receiver>
         <service
-            android:name="com.newapp2.datingapp.ui.BadgeIntentService"
+            android:name="com.dating.foryou.ui.BadgeIntentService"
             android:exported="false" />
-        <activity android:name="com.newapp2.datingapp.ProfileActivity"></activity>
+
+        <activity android:name="com.dating.foryou.UserProfileActivity" />
         <activity
-            android:name="com.newapp2.datingapp.MainActivity"
+            android:name="com.dating.foryou.MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar">
             <!--<intent-filter>-->
@@ -53,34 +54,30 @@
             <!--</intent-filter>-->
         </activity>
         <activity
-            android:name="com.newapp2.datingapp.TermsActivity"
+            android:name="com.dating.foryou.TermsActivity"
             android:theme="@style/fullScreen" />
         <activity
-            android:name="com.newapp2.datingapp.AnketaSecondPageActivity"
-            android:parentActivityName="com.newapp2.datingapp.AnketaActivity"
+            android:name="com.dating.foryou.QuestionsSecondPageActivity"
+            android:parentActivityName="com.dating.foryou.QuestionsActivity"
             android:theme="@style/fullScreen" />
         <activity
-            android:name="com.newapp2.datingapp.AnketaLastPageActivity"
-            android:parentActivityName="com.newapp2.datingapp.AnketaSecondPageActivity"
+            android:name="com.dating.foryou.QuestionsLastPageActivity"
+            android:parentActivityName="com.dating.foryou.QuestionsSecondPageActivity"
             android:theme="@style/fullScreen" />
         <activity
-            android:name="com.newapp2.datingapp.AnketaActivity"
-            android:parentActivityName="com.newapp2.datingapp.StartActivity"
+            android:name="com.dating.foryou.QuestionsActivity"
+            android:parentActivityName="com.dating.foryou.StartActivity"
             android:theme="@style/fullScreen" />
         <activity
-            android:name="com.newapp2.datingapp.CreateAccountActivity"
-            android:parentActivityName="com.newapp2.datingapp.StartActivity"
+            android:name="com.dating.foryou.CreateAccActivity"
+            android:parentActivityName="com.dating.foryou.StartActivity"
             android:theme="@style/fullScreen" />
         <activity
-            android:name="com.newapp2.datingapp.SignInActivity"
-            android:parentActivityName="com.newapp2.datingapp.StartActivity"
+            android:name="com.dating.foryou.SignInActivity"
+            android:parentActivityName="com.dating.foryou.StartActivity"
             android:theme="@style/fullScreen" />
         <activity
-            android:name="com.newapp2.datingapp.StartActivity"
-            android:theme="@style/fullScreen">
-        </activity>
-        <activity
-            android:name="com.newapp2.datingapp.ChooseAgeActivity"
+            android:name="com.dating.foryou.StartActivity"
             android:theme="@style/fullScreen">
         </activity>
 
@@ -103,7 +100,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.newapp2.datingapp.ui.SplashActivity"
+            android:name="com.dating.foryou.ui.SplashActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -113,13 +110,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.newapp2.datingapp.ui.WebViewActivity"
+            android:name="com.dating.foryou.ui.WebViewActivity"
             android:launchMode="singleTask"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="com.newapp2.datingapp.ui.DeepLinkWebView"
+            android:name="com.dating.foryou.ui.DeepLinkWebView"
             android:launchMode="singleTask"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait">
@@ -215,7 +212,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.newapp2.datingapp.ui.ContentActivity"
+            android:name="com.dating.foryou.ui.ContentActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
     </application>

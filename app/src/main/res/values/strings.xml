@@ -29,8 +29,8 @@
         <item>Other</item>
     </string-array>
 
-    <string name="facebook_app_id">259470224931113</string>
-    <string name="fb_login_protocol_scheme">fb259470224931113</string>
+    <string name="facebook_app_id">306357356928785</string>
+    <string name="fb_login_protocol_scheme">fb306357356928785</string>
     <string name="fill_an_account">Fill an account</string>
     <string name="pick_birthday_date">Pick your Birthday date</string>
     <string name="birth_date_tint">01.01.1980</string>

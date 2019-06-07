@@ -25,8 +25,8 @@ import java.util.Arrays;
 
 public class TheStartingActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private LoginButton mButtonFacebookLogin;
-    private CallbackManager callbackManager;
+    private LoginButton myButtonFacebookLogin;
+    private CallbackManager myCallbackManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,14 +34,14 @@ public class TheStartingActivity extends AppCompatActivity implements View.OnCli
 
         setContentView(R.layout.activity_the_starting);
         initView();
-        callbackManager = CallbackManager.Factory.create();
+        myCallbackManager = CallbackManager.Factory.create();
 
 
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        callbackManager.onActivityResult(requestCode, resultCode, data);
+        myCallbackManager.onActivityResult(requestCode, resultCode, data);
         super.onActivityResult(requestCode, resultCode, data);
 
     }
@@ -54,10 +54,10 @@ public class TheStartingActivity extends AppCompatActivity implements View.OnCli
         mSignInBtn.setOnClickListener(this);
         View mView1 = findViewById(R.id.view1);
         LinearLayout mSignInLinearLayout = findViewById(R.id.linearLayout_sign_in);
-        mButtonFacebookLogin = findViewById(R.id.login_button_facebook);
-        mButtonFacebookLogin.setReadPermissions(Arrays.asList("email", "public_profile", "user_friends"));
+        myButtonFacebookLogin = findViewById(R.id.login_button_facebook);
+        myButtonFacebookLogin.setReadPermissions(Arrays.asList("email", "public_profile", "user_friends"));
 
-        mButtonFacebookLogin.setOnClickListener(this);
+        myButtonFacebookLogin.setOnClickListener(this);
     }
 
     @Override
@@ -77,7 +77,7 @@ public class TheStartingActivity extends AppCompatActivity implements View.OnCli
                 break;
             case R.id.login_button_facebook:
 
-                mButtonFacebookLogin.registerCallback(callbackManager,
+                myButtonFacebookLogin.registerCallback(myCallbackManager,
                         new FacebookCallback<LoginResult>() {
                             @Override
                             public void onSuccess(LoginResult loginResult) {

@@ -26,12 +26,12 @@ import me.angrybyte.numberpicker.view.ActualNumberPicker;
 public class ProfileActivity extends AppCompatActivity implements View.OnClickListener {
 
 
-    private ImageView mProfilePicIv;
-    private TextView mHeightTv;
-    private ActualNumberPicker mPickerHeightActual;
-    private TextView mWeightTv;
-    private ActualNumberPicker mPickerWeightActual;
-    private EditText mNickEt;
+    private ImageView myProfilePicIv;
+    private TextView myHeightTv;
+    private ActualNumberPicker myPickerHeightActual;
+    private TextView myWeightTv;
+    private ActualNumberPicker myPickerWeightActual;
+    private EditText myNickEt;
 
     Presenter presenter = new Presenter();
 
@@ -53,23 +53,23 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     private void setDefaultValues() {
 
 
-        mNickEt.setText(String.valueOf(newEmployee.name));
-        mWeightTv.setText(String.valueOf(newEmployee.weight));
-        mHeightTv.setText(String.valueOf(newEmployee.height));
+        myNickEt.setText(String.valueOf(newEmployee.name));
+        myWeightTv.setText(String.valueOf(newEmployee.weight));
+        myHeightTv.setText(String.valueOf(newEmployee.height));
 
-        AllImgs.loadImageFromStorage(getApplicationContext(), mProfilePicIv, newEmployee.id);
+        AllImgs.loadImageFromStorage(getApplicationContext(), myProfilePicIv, newEmployee.id);
     }
 
 
     private void initView() {
         Button mAddImageBtn = findViewById(R.id.add_img_btn);
         mAddImageBtn.setOnClickListener(this);
-        mProfilePicIv = findViewById(R.id.iv_profile_pic);
-        mHeightTv = findViewById(R.id.your_height_display);
-        mPickerHeightActual = findViewById(R.id.actual_height_picker);
-        mWeightTv = findViewById(R.id.your_weight_display);
-        mPickerWeightActual = findViewById(R.id.actual_weight_picker);
-        mNickEt = findViewById(R.id.enter_your_nickname);
+        myProfilePicIv = findViewById(R.id.iv_profile_pic);
+        myHeightTv = findViewById(R.id.your_height_display);
+        myPickerHeightActual = findViewById(R.id.actual_height_picker);
+        myWeightTv = findViewById(R.id.your_weight_display);
+        myPickerWeightActual = findViewById(R.id.actual_weight_picker);
+        myNickEt = findViewById(R.id.enter_your_nickname);
         TextView mPrefixCmTv = findViewById(R.id.your_prefix_cm);
         TextView mPrefixKgTv = findViewById(R.id.your_prefix_kg);
         Button mChangeBtn = findViewById(R.id.change_btn);
@@ -77,19 +77,19 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     private void setListenerToPickerWeight() {
-        mPickerWeightActual.setListener(new OnValueChangeListener() {
+        myPickerWeightActual.setListener(new OnValueChangeListener() {
             @Override
             public void onValueChanged(int oldValue, int newValue) {
-                mWeightTv.setText(String.valueOf(newValue));
+                myWeightTv.setText(String.valueOf(newValue));
             }
         });
     }
 
     private void setListenerToPickerHeight() {
-        mPickerHeightActual.setListener(new OnValueChangeListener() {
+        myPickerHeightActual.setListener(new OnValueChangeListener() {
             @Override
             public void onValueChanged(int oldValue, int newValue) {
-                mHeightTv.setText(String.valueOf(newValue));
+                myHeightTv.setText(String.valueOf(newValue));
             }
         });
     }
@@ -121,8 +121,8 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
                 collectAllDataFromViewsToEmployee();
                 presenter.update(newEmployee);
 
-                if (mProfilePicIv.getDrawable() != null) {
-                    AllImgs.saveToInternalStorage(getApplicationContext(), mProfilePicIv, newEmployee.id);
+                if (myProfilePicIv.getDrawable() != null) {
+                    AllImgs.saveToInternalStorage(getApplicationContext(), myProfilePicIv, newEmployee.id);
                 }
 
                 Toast.makeText(v.getContext(), "Profile saved", Toast.LENGTH_SHORT).show();
@@ -151,8 +151,8 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
                 final Uri imageUri = data.getData();
                 final InputStream imageStream = getContentResolver().openInputStream(imageUri);
                 final Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
-                mProfilePicIv.setImageBitmap(selectedImage);
-                AllImgs.saveToInternalStorage(getApplicationContext(), mProfilePicIv, newEmployee.id);
+                myProfilePicIv.setImageBitmap(selectedImage);
+                AllImgs.saveToInternalStorage(getApplicationContext(), myProfilePicIv, newEmployee.id);
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
                 Toast.makeText(this, "Something went wrong", Toast.LENGTH_LONG).show();
@@ -164,9 +164,9 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     private void collectAllDataFromViewsToEmployee() {
-        newEmployee.name = mNickEt.getText().toString();
-        newEmployee.weight = Integer.valueOf(mWeightTv.getText().toString());
-        newEmployee.height = Integer.valueOf(mHeightTv.getText().toString());
+        newEmployee.name = myNickEt.getText().toString();
+        newEmployee.weight = Integer.valueOf(myWeightTv.getText().toString());
+        newEmployee.height = Integer.valueOf(myHeightTv.getText().toString());
 
     }
 }

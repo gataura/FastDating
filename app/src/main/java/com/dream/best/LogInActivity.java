@@ -13,8 +13,8 @@ import com.dream.best.Presenter.Presenter;
 
 public class LogInActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private EditText mEmailEt;
-    private EditText mPasswordEt;
+    private EditText myEmailEt;
+    private EditText myPasswordEt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +26,8 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void initView() {
-        mEmailEt = findViewById(R.id.enter_your_email_sign_up);
-        mPasswordEt = findViewById(R.id.enter_your_password_sign_up);
+        myEmailEt = findViewById(R.id.enter_your_email_sign_up);
+        myPasswordEt = findViewById(R.id.enter_your_password_sign_up);
         Button mSignInBtn = findViewById(R.id.btn_log_in_sign_in);
         mSignInBtn.setOnClickListener(this);
     }
@@ -38,8 +38,8 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
         switch (v.getId()) {
             case R.id.btn_log_in_sign_in:
 
-                String email = mEmailEt.getText().toString();
-                String password = mPasswordEt.getText().toString();
+                String email = myEmailEt.getText().toString();
+                String password = myPasswordEt.getText().toString();
 
                 Employee newEmployee = new Employee();
                 newEmployee.email = email;

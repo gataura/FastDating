@@ -28,8 +28,8 @@ import org.jetbrains.annotations.NotNull;
 public class TheFirstActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    NavigationView navigationView;
-    private Employee newEmployee;
+    NavigationView myNavigationView;
+    private Employee myNewEmployee;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,10 +54,10 @@ public class TheFirstActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+        myNavigationView = findViewById(R.id.nav_view);
+        myNavigationView.setNavigationItemSelectedListener(this);
 
-        newEmployee = (Employee) getIntent().getSerializableExtra("newEmployee");
+        myNewEmployee = (Employee) getIntent().getSerializableExtra("newEmployee");
     }
 
     private CircularImageView loadSettingsToCircularProfileImage(CircularImageView circularImageView) {
@@ -78,8 +78,8 @@ public class TheFirstActivity extends AppCompatActivity
     protected void onResume() {
         super.onResume();
 
-        changeNavbarNickName(navigationView, newEmployee.name);
-        changeNavbarResizedImage(navigationView);
+        changeNavbarNickName(myNavigationView, myNewEmployee.name);
+        changeNavbarResizedImage(myNavigationView);
 
     }
 
@@ -98,7 +98,7 @@ public class TheFirstActivity extends AppCompatActivity
         circularImageView = loadSettingsToCircularProfileImage(circularImageView);
 
         if (circularImageView.getDrawable() != null) {
-            AllImgs.loadImageFromStorage(getApplicationContext(), circularImageView, newEmployee.id);
+            AllImgs.loadImageFromStorage(getApplicationContext(), circularImageView, myNewEmployee.id);
         }
     }
 
@@ -148,7 +148,7 @@ public class TheFirstActivity extends AppCompatActivity
             // Handle the camera action
         } else if (id == R.id.nav_your_profile) {
             Intent intent = new Intent(this, ProfileActivity.class);
-            intent.putExtra("newEmployee", newEmployee);
+            intent.putExtra("newEmployee", myNewEmployee);
             startActivityForResult(intent, 1);
 
         } else if (id == R.id.nav_free_stars) {
@@ -184,7 +184,7 @@ public class TheFirstActivity extends AppCompatActivity
         if (requestCode == 1) {
             if (resultCode == Activity.RESULT_OK) {
                 assert data != null;
-                newEmployee = (Employee) data.getSerializableExtra("newEmployee");
+                myNewEmployee = (Employee) data.getSerializableExtra("newEmployee");
             }
         }
     }

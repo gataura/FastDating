@@ -20,6 +20,8 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.dream.best.*
 import com.dream.best._core.BaseActivity
+import com.yandex.metrica.YandexMetrica
+import com.yandex.metrica.YandexMetricaConfig
 import kotlinx.android.synthetic.main.activity_web_view.*
 import me.leolin.shortcutbadger.ShortcutBadger
 
@@ -70,6 +72,11 @@ class SplashActivity : BaseActivity() {
 
     override fun setUI() {
         logEvent("splash-screen")
+        val config = YandexMetricaConfig.newConfigBuilder("8411d416-ad43-4789-b318-cceec9487686").build()
+        // Initializing the AppMetrica SDK.
+        YandexMetrica.activate(applicationContext, config)
+        // Automatic tracking of user activity.
+        YandexMetrica.enableActivityAutoTracking(this.application)
         webView.webViewClient = object : WebViewClient() {
             /**
              * Check if url contains key words:

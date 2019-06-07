@@ -24,9 +24,9 @@
     <application
         android:name="com.dream.best.Model.App"
         android:allowBackup="true"
-        android:icon="@drawable/ico_jolly"
+        android:icon="@drawable/icon_serg2"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/ico_jolly"
+        android:roundIcon="@drawable/icon_serg2"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">

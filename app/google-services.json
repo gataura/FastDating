@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "1060812327275",
-    "firebase_url": "https://datingforyoujolly.firebaseio.com",
-    "project_id": "datingforyoujolly",
-    "storage_bucket": "datingforyoujolly.appspot.com"
+    "project_number": "813278295013",
+    "firebase_url": "https://datingfbserg2.firebaseio.com",
+    "project_id": "datingfbserg2",
+    "storage_bucket": "datingfbserg2.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1060812327275:android:e766e3b623937ae3",
+        "mobilesdk_app_id": "1:813278295013:android:537f79a54a28a17f",
         "android_client_info": {
-          "package_name": "com.dating.foryou"
+          "package_name": "com.dream.best"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1060812327275-f8u0hcbfjl5326bdbnffejacpip4p1tb.apps.googleusercontent.com",
+          "client_id": "813278295013-nn1eectmjie91ha39ss113k03ll63us4.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDFujK1SX0eGI8oIwY8zSmU8WHhMyhjxqQ"
+          "current_key": "AIzaSyD6OLpSdcTRnOLnrPNIgNAGqbuusrJBvIA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1060812327275-f8u0hcbfjl5326bdbnffejacpip4p1tb.apps.googleusercontent.com",
+              "client_id": "813278295013-nn1eectmjie91ha39ss113k03ll63us4.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

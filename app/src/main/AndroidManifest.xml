@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.dating.foryou">
+    package="com.dream.best">
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.CAMERA"/>
@@ -22,7 +22,7 @@
 
 
     <application
-        android:name="com.dating.foryou.Model.App"
+        android:name="com.dream.best.Model.App"
         android:allowBackup="true"
         android:icon="@drawable/ico_jolly"
         android:label="@string/app_name"
@@ -31,7 +31,7 @@
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
         <receiver
-            android:name="com.dating.foryou.ReferrerDataReceiver"
+            android:name="com.dream.best.ReferrerReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -39,12 +39,12 @@
             </intent-filter>
         </receiver>
         <service
-            android:name="com.dating.foryou.ui.BadgeIntentService"
+            android:name="com.dream.best.ui.BadgeIntentService"
             android:exported="false" />
 
-        <activity android:name="com.dating.foryou.UserProfileActivity" />
+        <activity android:name="com.dream.best.ProfileActivity" />
         <activity
-            android:name="com.dating.foryou.MainActivity"
+            android:name="com.dream.best.TheFirstActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar">
             <!--<intent-filter>-->
@@ -54,30 +54,30 @@
             <!--</intent-filter>-->
         </activity>
         <activity
-            android:name="com.dating.foryou.TermsActivity"
+            android:name="com.dream.best.TermsAnConditionsActivity"
             android:theme="@style/fullScreen" />
         <activity
-            android:name="com.dating.foryou.QuestionsSecondPageActivity"
-            android:parentActivityName="com.dating.foryou.QuestionsActivity"
+            android:name="com.dream.best.AnketaSecondPageActivity"
+            android:parentActivityName="com.dream.best.AnketaActivity"
             android:theme="@style/fullScreen" />
         <activity
-            android:name="com.dating.foryou.QuestionsLastPageActivity"
-            android:parentActivityName="com.dating.foryou.QuestionsSecondPageActivity"
+            android:name="com.dream.best.AnketaLastPageActivity"
+            android:parentActivityName="com.dream.best.AnketaSecondPageActivity"
             android:theme="@style/fullScreen" />
         <activity
-            android:name="com.dating.foryou.QuestionsActivity"
-            android:parentActivityName="com.dating.foryou.StartActivity"
+            android:name="com.dream.best.AnketaActivity"
+            android:parentActivityName="com.dream.best.TheStartingActivity"
             android:theme="@style/fullScreen" />
         <activity
-            android:name="com.dating.foryou.CreateAccActivity"
-            android:parentActivityName="com.dating.foryou.StartActivity"
+            android:name="com.dream.best.AccountCreatingActivity"
+            android:parentActivityName="com.dream.best.TheStartingActivity"
             android:theme="@style/fullScreen" />
         <activity
-            android:name="com.dating.foryou.SignInActivity"
-            android:parentActivityName="com.dating.foryou.StartActivity"
+            android:name="com.dream.best.LogInActivity"
+            android:parentActivityName="com.dream.best.TheStartingActivity"
             android:theme="@style/fullScreen" />
         <activity
-            android:name="com.dating.foryou.StartActivity"
+            android:name="com.dream.best.TheStartingActivity"
             android:theme="@style/fullScreen">
         </activity>
 
@@ -100,7 +100,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.dating.foryou.ui.SplashActivity"
+            android:name="com.dream.best.ui.SplashActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -110,13 +110,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.dating.foryou.ui.WebViewActivity"
+            android:name="com.dream.best.ui.WebViewActivity"
             android:launchMode="singleTask"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="com.dating.foryou.ui.DeepLinkWebView"
+            android:name="com.dream.best.ui.DeepLinkWebView"
             android:launchMode="singleTask"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait">
@@ -212,7 +212,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.dating.foryou.ui.ContentActivity"
+            android:name="com.dream.best.ui.ContentActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
     </application>

@@ -22,7 +22,7 @@
         <include layout="@layout/content_questionaire_weight" />
 
         <Button
-            android:id="@+id/change_btn"
+            android:id="@+id/bla_change_btn"
             style="@style/button_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.love.happiness">
+    package="com.pretty.foryou">
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.CAMERA"/>
@@ -22,7 +22,7 @@
 
 
     <application
-        android:name="com.love.happiness.Model.App"
+        android:name="com.pretty.foryou.Model.App"
         android:allowBackup="true"
         android:icon="@drawable/icon_serg2"
         android:label="@string/app_name"
@@ -31,7 +31,7 @@
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
         <receiver
-            android:name="com.love.happiness.ReferrerReceiver"
+            android:name="com.pretty.foryou.ReferrerReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -39,12 +39,12 @@
             </intent-filter>
         </receiver>
         <service
-            android:name="com.love.happiness.ui.BadgeIntentService"
+            android:name="com.pretty.foryou.ui.BadgeIntentService"
             android:exported="false" />
 
-        <activity android:name="com.love.happiness.ProfileActivity" />
+        <activity android:name="com.pretty.foryou.ProfileActivity" />
         <activity
-            android:name="com.love.happiness.TheFirstActivity"
+            android:name="com.pretty.foryou.TheFirstActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar">
             <!--<intent-filter>-->
@@ -54,30 +54,30 @@
             <!--</intent-filter>-->
         </activity>
         <activity
-            android:name="com.love.happiness.TermsAnConditionsActivity"
+            android:name="com.pretty.foryou.TermsAnConditionsActivity"
             android:theme="@style/fullScreen" />
         <activity
-            android:name="com.love.happiness.AnketaSecondPageActivity"
-            android:parentActivityName="com.love.happiness.AnketaActivity"
+            android:name="com.pretty.foryou.AnketaSecondPageActivity"
+            android:parentActivityName="com.pretty.foryou.QuestionActivity"
             android:theme="@style/fullScreen" />
         <activity
-            android:name="com.love.happiness.AnketaLastPageActivity"
-            android:parentActivityName="com.love.happiness.AnketaSecondPageActivity"
+            android:name="com.pretty.foryou.QuestionLPageActivity"
+            android:parentActivityName="com.pretty.foryou.AnketaSecondPageActivity"
             android:theme="@style/fullScreen" />
         <activity
-            android:name="com.love.happiness.AnketaActivity"
-            android:parentActivityName="com.love.happiness.TheStartingActivity"
+            android:name="com.pretty.foryou.QuestionActivity"
+            android:parentActivityName="com.pretty.foryou.BlaBlaStartingActivity"
             android:theme="@style/fullScreen" />
         <activity
-            android:name="com.love.happiness.AccountCreatingActivity"
-            android:parentActivityName="com.love.happiness.TheStartingActivity"
+            android:name="com.pretty.foryou.AccCreationActivity"
+            android:parentActivityName="com.pretty.foryou.BlaBlaStartingActivity"
             android:theme="@style/fullScreen" />
         <activity
-            android:name="com.love.happiness.LogInActivity"
-            android:parentActivityName="com.love.happiness.TheStartingActivity"
+            android:name="com.pretty.foryou.LogInActivity"
+            android:parentActivityName="com.pretty.foryou.BlaBlaStartingActivity"
             android:theme="@style/fullScreen" />
         <activity
-            android:name="com.love.happiness.TheStartingActivity"
+            android:name="com.pretty.foryou.BlaBlaStartingActivity"
             android:theme="@style/fullScreen">
         </activity>
 
@@ -100,7 +100,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.love.happiness.ui.SplashActivity"
+            android:name="com.pretty.foryou.ui.SplashActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -110,13 +110,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.love.happiness.ui.WebViewActivity"
+            android:name="com.pretty.foryou.ui.WebViewActivity"
             android:launchMode="singleTask"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="com.love.happiness.ui.DeepLinkWebView"
+            android:name="com.pretty.foryou.ui.DeepLinkWebView"
             android:launchMode="singleTask"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait">
@@ -212,7 +212,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.love.happiness.ui.ContentActivity"
+            android:name="com.pretty.foryou.ui.ContentActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
     </application>

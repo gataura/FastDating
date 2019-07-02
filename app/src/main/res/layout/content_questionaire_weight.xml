@@ -27,7 +27,7 @@
             android:textColor="@color/primary_dark" />
 
         <TextView
-            android:id="@+id/your_weight_display"
+            android:id="@+id/bla_weight_show"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -56,10 +56,10 @@
 
 
         <me.angrybyte.numberpicker.view.ActualNumberPicker
-            android:id="@+id/actual_weight_picker"
+            android:id="@+id/bla_weight_picker"
             android:layout_width="258dp"
             android:layout_height="48dp"
-            android:layout_below="@id/your_weight_display"
+            android:layout_below="@id/bla_weight_show"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal"
 

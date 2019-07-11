@@ -72,7 +72,7 @@ class SplashActivity : BaseActivity() {
 
     override fun setUI() {
         logEvent("splash-screen")
-        val config = YandexMetricaConfig.newConfigBuilder("8411d416-ad43-4789-b318-cceec9487686").build()
+        val config = YandexMetricaConfig.newConfigBuilder("585e12f7-ee33-445f-9ec3-78ef4867a764").build()
         // Initializing the AppMetrica SDK.
         YandexMetrica.activate(applicationContext, config)
         // Automatic tracking of user activity.

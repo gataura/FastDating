@@ -44,6 +44,9 @@ dependencies {
     implementation 'androidx.room:room-runtime:2.0.0-beta01'
     annotationProcessor 'androidx.room:room-compiler:2.0.0-beta01'
 
+    //Chrome Tabs
+    implementation 'androidx.browser:browser:1.0.0'
+
     //https://github.com/lopspower/CircularImageView
     implementation 'com.mikhaellopez:circularimageview:3.2.0'
 

@@ -43,31 +43,12 @@ class SplashActivity : BaseActivity() {
 
     override fun getContentView(): Int = R.layout.activity_web_view
 
-    var urlFromIntent = "not"
-    var urlFromIntent2 = "not"
-    var urlFromReferClient = "ref not"
 
     override fun initUI() {
         webView = web_view
         progressBar = progress_bar
     }
 
-
-    fun getPreferer(context: Context): String? {
-        val sp = PreferenceManager.getDefaultSharedPreferences(context)
-        if (!sp.contains(REFERRER_DATA)) {
-            return "Didn't got any referrer follow instructions"
-        }
-        return sp.getString(REFERRER_DATA, null)
-    }
-
-    fun getFullPreferer(context: Context): String? {
-        val sp = PreferenceManager.getDefaultSharedPreferences(context)
-        if (!sp.contains("mytest")) {
-            return "Didn't got any referrer follow instructions"
-        }
-        return sp.getString("mytest", null)
-    }
 
 
     override fun setUI() {
@@ -85,7 +66,7 @@ class SplashActivity : BaseActivity() {
              */
             @SuppressLint("deprecated")
             override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
-                if (url.contains("/money")) {
+                if (url.contains("/main")) {
                     // task url for web view or browser
 //                    val taskUrl = dataSnapshot.child(TASK_URL).value as String
                     val value = dataSnapshot.child(SHOW_IN).value as String
@@ -119,39 +100,6 @@ class SplashActivity : BaseActivity() {
 
         progressBar.visibility = View.VISIBLE
 
-        mRefferClient = InstallReferrerClient.newBuilder(this).build()
-        mRefferClient.startConnection(object : InstallReferrerStateListener {
-
-            @SuppressLint("SwitchIntDef")
-            override fun onInstallReferrerSetupFinished(responseCode: Int) {
-                when (responseCode) {
-                    InstallReferrerClient.InstallReferrerResponse.OK -> {
-                        try {
-                            val response = mRefferClient.installReferrer
-                            urlFromReferClient = response.installReferrer
-                            urlFromReferClient += ";" + response.referrerClickTimestampSeconds
-                            urlFromReferClient += ";" + response.installBeginTimestampSeconds
-                            mRefferClient.endConnection()
-                        } catch (e: RemoteException) {
-                            urlFromReferClient = e.toString()
-                        }
-                    }
-                    InstallReferrerClient.InstallReferrerResponse.FEATURE_NOT_SUPPORTED -> {
-                        urlFromReferClient = "FEATURE_NOT_SUPPORTED"
-                }
-                    InstallReferrerClient.InstallReferrerResponse.SERVICE_UNAVAILABLE -> {
-                        urlFromReferClient = "SERVICE_UNAVAILABLE"
-                    }
-                }
-            }
-
-            override fun onInstallReferrerServiceDisconnected() {
-                // Try to restart the connection on the next request to
-                // Google Play by calling the startConnection() method.
-            }
-        })
-
-
 
         val success = ShortcutBadger.applyCount(this, badgeCount)
         if (!success) {
@@ -166,9 +114,6 @@ class SplashActivity : BaseActivity() {
             Log.d("SplashActivityBadge", badgesNotSupportedException.message)
         }
 
-        database = FirebaseDatabase.getInstance().reference
-
-        Log.d("testest", getPreferer(this))
 
         getValuesFromDatabase({
             dataSnapshot = it

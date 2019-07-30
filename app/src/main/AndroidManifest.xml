@@ -17,9 +17,9 @@
     <application
         android:name="dating.app.fastdating.Model.App"
         android:allowBackup="true"
-        android:icon="@drawable/pretty_logo"
+        android:icon="@drawable/ico_fast_dating"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/pretty_logo"
+        android:roundIcon="@drawable/ico_fast_dating"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">

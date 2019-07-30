@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Pretty</string>
+    <string name="app_name">FastDating - DatingOnline</string>
     <string name="title_activity_main">Dating for serious relationship</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -29,8 +29,8 @@
         <item>Other</item>
     </string-array>
 
-    <string name="facebook_app_id">1102260889983239</string>
-    <string name="fb_login_protocol_scheme">fb1102260889983239</string>
+    <string name="facebook_app_id">1250853918422532</string>
+    <string name="fb_login_protocol_scheme">fb1250853918422532</string>
     <string name="fill_an_account">Fill an account</string>
     <string name="pick_birthday_date">Pick your Birthday date</string>
     <string name="birth_date_tint">01.01.1980</string>

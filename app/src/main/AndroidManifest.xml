@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.pretty.foryou">
+    package="dating.app.fastdating">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -15,7 +15,7 @@
     <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" />
 
     <application
-        android:name=".Model.App"
+        android:name="dating.app.fastdating.Model.App"
         android:allowBackup="true"
         android:icon="@drawable/pretty_logo"
         android:label="@string/app_name"
@@ -23,24 +23,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.ChromeTabsActivity"></activity>
+        <activity android:name="dating.app.fastdating.ui.ChromeTabsActivity"></activity>
 
-        <receiver
-            android:name=".ReferrerReceiver"
-            android:enabled="true"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="com.android.vending.INSTALL_REFERRER" />
-            </intent-filter>
-        </receiver>
 
         <service
-            android:name=".ui.BadgeIntentService"
+            android:name="dating.app.fastdating.ui.BadgeIntentService"
             android:exported="false" />
 
-        <activity android:name=".ProfileActivity" />
+        <activity android:name="dating.app.fastdating.StranichkaActivity" />
         <activity
-            android:name=".TheFirstActivity"
+            android:name="dating.app.fastdating.SamayaPervayaActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar">
 
@@ -51,30 +43,30 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name=".TermsAnConditionsActivity"
+            android:name="dating.app.fastdating.PravilaUsloviyaActivity"
             android:theme="@style/fullScreen" />
         <activity
-            android:name=".AnketaSecondPageActivity"
-            android:parentActivityName=".QuestionActivity"
+            android:name="dating.app.fastdating.MyAnketaSecsPagaActivity"
+            android:parentActivityName="dating.app.fastdating.QuestionActivity"
             android:theme="@style/fullScreen" />
         <activity
-            android:name=".QuestionLPageActivity"
-            android:parentActivityName=".AnketaSecondPageActivity"
+            android:name="dating.app.fastdating.QuestionLPageActivity"
+            android:parentActivityName="dating.app.fastdating.MyAnketaSecsPagaActivity"
             android:theme="@style/fullScreen" />
         <activity
-            android:name=".QuestionActivity"
-            android:parentActivityName=".BlaBlaStartingActivity"
+            android:name="dating.app.fastdating.QuestionActivity"
+            android:parentActivityName="dating.app.fastdating.CheTamStartingActivity"
             android:theme="@style/fullScreen" />
         <activity
-            android:name=".AccCreationActivity"
-            android:parentActivityName=".BlaBlaStartingActivity"
+            android:name="dating.app.fastdating.AccSomeCreationWordsActivity"
+            android:parentActivityName="dating.app.fastdating.CheTamStartingActivity"
             android:theme="@style/fullScreen" />
         <activity
-            android:name=".LogInActivity"
-            android:parentActivityName=".BlaBlaStartingActivity"
+            android:name="dating.app.fastdating.SignTudaInSyudaActivity"
+            android:parentActivityName="dating.app.fastdating.CheTamStartingActivity"
             android:theme="@style/fullScreen" />
         <activity
-            android:name=".BlaBlaStartingActivity"
+            android:name="dating.app.fastdating.CheTamStartingActivity"
             android:theme="@style/fullScreen"></activity>
 
         <meta-data
@@ -98,7 +90,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.SplashActivity"
+            android:name="dating.app.fastdating.ui.SplashFcknActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -108,12 +100,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.WebViewActivity"
+            android:name="dating.app.fastdating.ui.WebViewFcknActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
-            android:name=".ui.DeepLinkWebView"
+            android:name="dating.app.fastdating.ui.DeepLinkWebView"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
@@ -219,7 +211,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.ContentActivity"
+            android:name="dating.app.fastdating.ui.ContentFcknActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
     </application>

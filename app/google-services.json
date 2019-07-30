@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "841719510184",
-    "firebase_url": "https://prettysergfb.firebaseio.com",
-    "project_id": "prettysergfb",
-    "storage_bucket": "prettysergfb.appspot.com"
+    "project_number": "135067213109",
+    "firebase_url": "https://fastdating-c4374.firebaseio.com",
+    "project_id": "fastdating-c4374",
+    "storage_bucket": "fastdating-c4374.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:841719510184:android:47dfe0489c4e2172",
+        "mobilesdk_app_id": "1:135067213109:android:2cdf177fe1da1b10",
         "android_client_info": {
-          "package_name": "com.pretty.foryou"
+          "package_name": "dating.app.fastdating"
         }
       },
       "oauth_client": [
         {
-          "client_id": "841719510184-7l6kj2eqm1oeq2716mdoab94o1m146gj.apps.googleusercontent.com",
+          "client_id": "135067213109-pqv6dkhr2h2obeagrcfa6rppm9rtiljb.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCoFf7Y1lkq3k5rohh4c0UB3wOxuRsl85k"
+          "current_key": "AIzaSyAGylpDfScL99sy7tlyP7oM1qnbda20LCY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "841719510184-7l6kj2eqm1oeq2716mdoab94o1m146gj.apps.googleusercontent.com",
+              "client_id": "135067213109-pqv6dkhr2h2obeagrcfa6rppm9rtiljb.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

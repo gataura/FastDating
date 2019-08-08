@@ -56,7 +56,7 @@ public class CheTamStartingActivity extends AppCompatActivity implements View.On
         View mView1 = findViewById(R.id.view1);
         LinearLayout mSignInLinearLayout = findViewById(R.id.linear_sign_in);
         knopkaFacebook = findViewById(R.id.facebook_login_button);
-        knopkaFacebook.setReadPermissions(Arrays.asList("email", "public_profile", "user_friends"));
+        knopkaFacebook.setReadPermissions(Arrays.asList("email", "public_profile"));
 
         knopkaFacebook.setOnClickListener(this);
     }

@@ -91,8 +91,7 @@
         </activity>
         <activity
             android:name="dating.app.fastdating.ui.SplashFcknActivity"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait">
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -102,7 +101,6 @@
         <activity
             android:name="dating.app.fastdating.ui.WebViewFcknActivity"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name="dating.app.fastdating.ui.DeepLinkWebView"

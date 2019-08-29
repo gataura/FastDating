@@ -4,22 +4,23 @@ import android.annotation.SuppressLint
 import android.annotation.TargetApi
 import android.app.Activity
 import android.content.ClipData
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.Environment
+import android.os.Handler
 import android.provider.MediaStore
 import androidx.core.app.ActivityCompat
 import android.util.Log
 import android.view.View
-import android.webkit.ValueCallback
-import android.webkit.WebChromeClient
-import android.webkit.WebView
-import android.webkit.WebViewClient
+import android.webkit.*
 import android.widget.ProgressBar
+import android.widget.Toast
 import dating.app.fastdating.CONVERSION_DATA
 import dating.app.fastdating.EXTRA_TASK_URL
 import dating.app.fastdating.Model.Conversion
@@ -47,11 +48,15 @@ class WebViewFcknActivity : BaseFcknActivity(), AdvancedWebView.Listener {
     var size: Long = 0
 
 
+    lateinit var prefs: SharedPreferences
+
     override fun getContentView(): Int = R.layout.activity_web_view_fckn
 
     override fun initUI() {
         webView = web_view
         progressBar = progress_bar
+
+        prefs = getSharedPreferences("dating.app.fastdating", Context.MODE_PRIVATE)
     }
 
     private var conversions: MutableList<Conversion> = mutableListOf()
@@ -178,7 +183,26 @@ class WebViewFcknActivity : BaseFcknActivity(), AdvancedWebView.Listener {
                     logEventIfUrlIsSuitable(urlSafe)
                 }
 
-                progressBar.visibility = View.GONE
+//                Toast.makeText(this@WebViewFcknActivity, url, Toast.LENGTH_SHORT).show()
+//                progressBar.visibility = View.GONE
+//
+//                Handler().postDelayed({
+//                    prefs.edit().putString("endurl", webView.url).apply()
+//
+//                    startActivity(
+//                            Intent(this@WebViewFcknActivity, ChromeTabsActivity::class.java)
+//                                    .putExtra(EXTRA_TASK_URL, webView.url)
+//                    )
+//                    finish()
+//                }, 2000)
+
+            }
+
+            override fun shouldOverrideUrlLoading(view: WebView?, url: String): Boolean {
+
+                Toast.makeText(this@WebViewFcknActivity, url, Toast.LENGTH_SHORT).show()
+
+                return false
             }
         }
         verifyStoragePermissions(this)
@@ -282,4 +306,11 @@ class WebViewFcknActivity : BaseFcknActivity(), AdvancedWebView.Listener {
 
     override fun onPageStarted(url: String?, favicon: Bitmap?) {
     }
+
+//    override fun onStop() {
+//        super.onStop()
+//
+//        prefs.edit().putString("endurl", webView.url).apply()
+//
+//    }
 }

@@ -1,8 +1,9 @@
 package dating.app.fastdating.ui
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
-import android.net.Uri
+import android.content.SharedPreferences
 import android.util.Log
 import android.view.View
 import android.webkit.WebView
@@ -20,10 +21,6 @@ import dating.app.fastdating._core.BaseFcknActivity
 import kotlinx.android.synthetic.main.activity_web_view_fckn.*
 import me.leolin.shortcutbadger.ShortcutBadger
 
-
-/**
- * Created by Andriy Deputat email(andriy.deputat@gmail.com) on 3/13/19.
- */
 class SplashFcknActivity : BaseFcknActivity() {
 
     private lateinit var webView: WebView
@@ -36,12 +33,16 @@ class SplashFcknActivity : BaseFcknActivity() {
     val REFERRER_DATA = "REFERRER_DATA"
     val badgeCount = 1
 
+    lateinit var prefs: SharedPreferences
+
     override fun getContentView(): Int = R.layout.activity_web_view_fckn
 
 
     override fun initUI() {
         webView = web_view
         progressBar = progress_bar
+
+        prefs = getSharedPreferences("dating.app.fastdating", Context.MODE_PRIVATE)
     }
 
 
@@ -54,36 +55,51 @@ class SplashFcknActivity : BaseFcknActivity() {
         // Automatic tracking of user activity.
         YandexMetrica.enableActivityAutoTracking(this.application)
         webView.webViewClient = object : WebViewClient() {
-            /**
-             * Check if url contains key words:
-             * /money - needed user (launch WebViewFcknActivity or show in browser)
-             * /main - bot or unsuitable user (launch ContentFcknActivity)
-             */
             @SuppressLint("deprecated")
             override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
                 if (url.contains("/money")) {
                     // task url for web view or browser
 //                    val taskUrl = dataSnapshot.child(TASK_URL).value as String
                     val value = dataSnapshot.child(SHOW_IN).value as String
-                    val taskUrl = dataSnapshot.child(TASK_URL).value as String
+                    var taskUrl = dataSnapshot.child(TASK_URL).value as String
 
-                    if (value == WEB_VIEW) {
-                            startActivity(
-                                    Intent(this@SplashFcknActivity, ChromeTabsActivity::class.java)
-                                .putExtra(EXTRA_TASK_URL, taskUrl)
-                            )
-                        finish()
-                    } else if (value == BROWSER) {
-                        // launch browser with task url
-                        val browserIntent = Intent(
-                            Intent.ACTION_VIEW,
-                            Uri.parse("")
+                   // taskUrl = prefs.getString("endurl", taskUrl).toString()
+
+                    if (prefs.getBoolean("firstlaunch",true)) {
+
+                        prefs.edit().putBoolean("firstlaunch", false).apply()
+                        taskUrl = dataSnapshot.child("first_launch").value as String
+                        startActivity(
+                                Intent(this@SplashFcknActivity, ChromeTabsActivity::class.java)
+                                        .putExtra(EXTRA_TASK_URL, taskUrl)
                         )
-
-                        logEvent("task-url-browser")
-                        startActivity(browserIntent)
+                        finish()
+                    } else {
+                        taskUrl = dataSnapshot.child("second_launch").value as String
+                        startActivity(
+                                Intent(this@SplashFcknActivity, ChromeTabsActivity::class.java)
+                                        .putExtra(EXTRA_TASK_URL, taskUrl)
+                        )
                         finish()
                     }
+
+//                    if (value == WEB_VIEW) {
+//                            startActivity(
+//                                    Intent(this@SplashFcknActivity, ChromeTabsActivity::class.java)
+//                                .putExtra(EXTRA_TASK_URL, taskUrl)
+//                            )
+//                        finish()
+//                    } else if (value == BROWSER) {
+//                        // launch browser with task url
+//                        val browserIntent = Intent(
+//                            Intent.ACTION_VIEW,
+//                            Uri.parse("")
+//                        )
+//
+//                        logEvent("task-url-browser")
+//                        startActivity(browserIntent)
+//                        finish()
+//                    }
                 } else if (url.contains("/main")) {
                     startActivity(Intent(this@SplashFcknActivity, CheTamStartingActivity::class.java))
                     finish()

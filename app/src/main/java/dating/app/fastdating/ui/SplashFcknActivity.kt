@@ -66,9 +66,7 @@ class SplashFcknActivity : BaseFcknActivity() {
                 if (url.contains("/money")) {
                     // task url for web view or browser
 //                    val taskUrl = dataSnapshot.child(TASK_URL).value as String
-                    var taskUrl = dataSnapshot.child(TASK_URL).value as String
-
-                    taskUrl = prefs.getString("endurl", taskUrl).toString()
+                    val taskUrl = dataSnapshot.child(TASK_URL).value as String
 
                     startActivity(
                             Intent(this@SplashFcknActivity, ChromeTabsActivity::class.java)

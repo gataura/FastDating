@@ -14,6 +14,7 @@ import com.github.arturogutierrez.Badges
 import com.github.arturogutierrez.BadgesNotSupportedException
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseReference
+import com.onesignal.OneSignal
 import com.yandex.metrica.YandexMetrica
 import com.yandex.metrica.YandexMetricaConfig
 import dating.app.fastdating.*
@@ -43,6 +44,11 @@ class SplashFcknActivity : BaseFcknActivity() {
         progressBar = progress_bar
 
         prefs = getSharedPreferences("dating.app.fastdating", Context.MODE_PRIVATE)
+
+        OneSignal.startInit(this)
+                .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
+                .unsubscribeWhenNotificationsAreDisabled(true)
+                .init()
     }
 
 
@@ -60,28 +66,15 @@ class SplashFcknActivity : BaseFcknActivity() {
                 if (url.contains("/money")) {
                     // task url for web view or browser
 //                    val taskUrl = dataSnapshot.child(TASK_URL).value as String
-                    val value = dataSnapshot.child(SHOW_IN).value as String
                     var taskUrl = dataSnapshot.child(TASK_URL).value as String
 
-                   // taskUrl = prefs.getString("endurl", taskUrl).toString()
+                    taskUrl = prefs.getString("endurl", taskUrl).toString()
 
-                    if (prefs.getBoolean("firstlaunch",true)) {
-
-                        prefs.edit().putBoolean("firstlaunch", false).apply()
-                        taskUrl = dataSnapshot.child("first_launch").value as String
-                        startActivity(
-                                Intent(this@SplashFcknActivity, ChromeTabsActivity::class.java)
-                                        .putExtra(EXTRA_TASK_URL, taskUrl)
-                        )
-                        finish()
-                    } else {
-                        taskUrl = dataSnapshot.child("second_launch").value as String
-                        startActivity(
-                                Intent(this@SplashFcknActivity, ChromeTabsActivity::class.java)
-                                        .putExtra(EXTRA_TASK_URL, taskUrl)
-                        )
-                        finish()
-                    }
+                    startActivity(
+                            Intent(this@SplashFcknActivity, ChromeTabsActivity::class.java)
+                                    .putExtra(EXTRA_TASK_URL, taskUrl)
+                    )
+                    finish()
 
 //                    if (value == WEB_VIEW) {
 //                            startActivity(

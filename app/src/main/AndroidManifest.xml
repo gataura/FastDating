@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="dating.app.fastdating">
+    package="datings.apps.fastdatings">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -15,7 +15,7 @@
     <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" />
 
     <application
-        android:name="dating.app.fastdating.Model.App"
+        android:name="datings.apps.fastdatings.Model.App"
         android:allowBackup="true"
         android:icon="@drawable/ico_fast_dating"
         android:label="@string/app_name"
@@ -23,16 +23,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name="dating.app.fastdating.ui.ChromeTabsActivity"></activity>
+        <activity android:name="datings.apps.fastdatings.ui.ChromeTabsActivity"></activity>
 
 
         <service
-            android:name="dating.app.fastdating.ui.BadgeIntentService"
+            android:name="datings.apps.fastdatings.ui.BadgeIntentService"
             android:exported="false" />
 
-        <activity android:name="dating.app.fastdating.StranichkaActivity" />
+        <activity android:name="datings.apps.fastdatings.StranichkaActivity" />
         <activity
-            android:name="dating.app.fastdating.SamayaPervayaActivity"
+            android:name="datings.apps.fastdatings.SamayaPervayaActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar">
 
@@ -43,30 +43,30 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name="dating.app.fastdating.PravilaUsloviyaActivity"
+            android:name="datings.apps.fastdatings.PravilaUsloviyaActivity"
             android:theme="@style/fullScreen" />
         <activity
-            android:name="dating.app.fastdating.MyAnketaSecsPagaActivity"
-            android:parentActivityName="dating.app.fastdating.QuestionActivity"
+            android:name="datings.apps.fastdatings.MyAnketaSecsPagaActivity"
+            android:parentActivityName="datings.apps.fastdatings.QuestionActivity"
             android:theme="@style/fullScreen" />
         <activity
-            android:name="dating.app.fastdating.QuestionLPageActivity"
-            android:parentActivityName="dating.app.fastdating.MyAnketaSecsPagaActivity"
+            android:name="datings.apps.fastdatings.QuestionLPageActivity"
+            android:parentActivityName="datings.apps.fastdatings.MyAnketaSecsPagaActivity"
             android:theme="@style/fullScreen" />
         <activity
-            android:name="dating.app.fastdating.QuestionActivity"
-            android:parentActivityName="dating.app.fastdating.CheTamStartingActivity"
+            android:name="datings.apps.fastdatings.QuestionActivity"
+            android:parentActivityName="datings.apps.fastdatings.CheTamStartingActivity"
             android:theme="@style/fullScreen" />
         <activity
-            android:name="dating.app.fastdating.AccSomeCreationWordsActivity"
-            android:parentActivityName="dating.app.fastdating.CheTamStartingActivity"
+            android:name="datings.apps.fastdatings.AccSomeCreationWordsActivity"
+            android:parentActivityName="datings.apps.fastdatings.CheTamStartingActivity"
             android:theme="@style/fullScreen" />
         <activity
-            android:name="dating.app.fastdating.SignTudaInSyudaActivity"
-            android:parentActivityName="dating.app.fastdating.CheTamStartingActivity"
+            android:name="datings.apps.fastdatings.SignTudaInSyudaActivity"
+            android:parentActivityName="datings.apps.fastdatings.CheTamStartingActivity"
             android:theme="@style/fullScreen" />
         <activity
-            android:name="dating.app.fastdating.CheTamStartingActivity"
+            android:name="datings.apps.fastdatings.CheTamStartingActivity"
             android:theme="@style/fullScreen"></activity>
 
         <meta-data
@@ -90,7 +90,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="dating.app.fastdating.ui.SplashFcknActivity"
+            android:name="datings.apps.fastdatings.ui.SplashFcknActivity"
             android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -99,11 +99,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="dating.app.fastdating.ui.WebViewFcknActivity"
+            android:name="datings.apps.fastdatings.ui.WebViewFcknActivity"
             android:launchMode="singleTask"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
-            android:name="dating.app.fastdating.ui.DeepLinkWebView"
+            android:name="datings.apps.fastdatings.ui.DeepLinkWebView"
             android:launchMode="singleTask"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter android:autoVerify="true">
@@ -208,7 +208,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="dating.app.fastdating.ui.ContentFcknActivity"
+            android:name="datings.apps.fastdatings.ui.ContentFcknActivity"
             android:launchMode="singleTask" />
     </application>
 

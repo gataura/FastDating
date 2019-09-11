@@ -11,7 +11,7 @@ apply plugin: 'com.google.gms.google-services'
 android {
     compileSdkVersion 29
     defaultConfig {
-        applicationId "dating.app.fastdating"
+        applicationId "datings.apps.fastdatings"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1

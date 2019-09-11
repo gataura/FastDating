@@ -7,7 +7,7 @@
     android:background="@drawable/start_background"
     android:orientation="vertical"
 
-    tools:context="dating.app.fastdating.CheTamStartingActivity">
+    tools:context="datings.apps.fastdatings.CheTamStartingActivity">
 
     <ImageView
 

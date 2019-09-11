@@ -34,6 +34,35 @@
           ]
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:135067213109:android:0e874c36c6e95be856007c",
+        "android_client_info": {
+          "package_name": "datings.apps.fastdatings"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "135067213109-pqv6dkhr2h2obeagrcfa6rppm9rtiljb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGylpDfScL99sy7tlyP7oM1qnbda20LCY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "135067213109-pqv6dkhr2h2obeagrcfa6rppm9rtiljb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
     }
   ],
   "configuration_version": "1"

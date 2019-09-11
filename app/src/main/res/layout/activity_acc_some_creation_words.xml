@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_pink_rice"
     android:orientation="vertical"
-    tools:context="dating.app.fastdating.SignTudaInSyudaActivity">
+    tools:context="datings.apps.fastdatings.SignTudaInSyudaActivity">
 
     <TextView
         android:layout_width="match_parent"
